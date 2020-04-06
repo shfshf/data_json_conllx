@@ -2,6 +2,7 @@
 
 import json
 import os
+import shutil
 import pathlib
 
 
@@ -10,6 +11,8 @@ def make_dir():
     for i in dirs:
         if not os.path.exists(i):
             os.makedirs(i)
+    file = r'./ucloud_configure.json'
+    shutil.copy(os.path.join(file), './data/final')
 
 
 def turn(file_prefix):
