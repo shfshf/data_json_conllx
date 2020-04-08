@@ -14,7 +14,7 @@ install_requires = [
 ]
 
 setup(name='data_json_conllx',
-      version='1.0',
+      version='1.2',
       description='data_json_conllx',
       url='https://github.com/shfshf/data_json_conllx',
       author='SHF',
