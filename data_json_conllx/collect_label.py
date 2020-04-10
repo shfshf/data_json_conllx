@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
-from tokenizer_tools.conllz.tag_collector import collect_label_to_file
+
+from tokenizer_tools.tagset.offset.corpus import Corpus
 
 
-collect_label_to_file(['data/all_data.conllx'], 'data/final/label.txt')
+corpus = Corpus.read_from_file("data/all_data.conllx")
+
+with open("data/final/label.txt", "wt") as fd:
+    fd.write("\n".join([doc.label for doc in corpus]))
